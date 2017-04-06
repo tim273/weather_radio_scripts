@@ -29,18 +29,19 @@ Once booted, you will be presented with a log in prompt.  There is no user inter
 
     sudo raspi-config
     
-Select 5 Interfacing Options, hit Enter
-Select 2 SSH, hit Enter
-Select Yes to enable SSH
-At the main menu, select 7 Advanced Options
-Select A3 Memory Split
-Type in 16 and select Ok
+* Select 5 Interfacing Options, hit Enter
+* Select 2 SSH, hit Enter
+* Select Yes to enable SSH
+* At the main menu, select 7 Advanced Options
+* Select A3 Memory Split
+* Type in 16 and select Ok
 
-Optional: From the main menu
+#### Optional: From the main menu
 
-Select 2 Hostname and slelect Ok
-change the hostname from "raspberrypi" to something more meaningful like "weather-radio-streamer" or whatever you choose.
-Select 4 Localisation Options then I2 Change Timezone then choose your timezone (GMT is the default timezone).
+* Select 2 Hostname and slelect Ok 
+* Change the hostname from "raspberrypi" to something more meaningful like "weather-radio-streamer" or whatever you choose.
+* Select 4 Localisation Options
+* Select I2 Change Timezone then choose your timezone (GMT is the default timezone).
 
 Then exit out of raspi-config by selecting Finish and hit Enter.  If it ask to reboot, select no or cancel as we will be rebooting later.
 
