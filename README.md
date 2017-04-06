@@ -162,3 +162,7 @@ That's it!  Well almost, reboot your Pi and you should have a functioning mount 
     sudo reboot
     
 Wait a few minutes and if all goes well, you should be able to go to http://raspberry.pi.ip:8000 (or whatever Icecast server you are pointing to) and see your mount point and hear your weather radio stream!
+
+[Stopping and Starting Services](SERVICES.md)
+
+[Optional Steps](OPTIONAL.md)
