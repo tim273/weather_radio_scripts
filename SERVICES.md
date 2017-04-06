@@ -58,3 +58,5 @@ Then you can reattach the same way as mentioned above:
     sudo screen -r
     
 Don't type Ctrl+c unless you want to stop the RTL SDR script.  If you want to exit out of screen completely, type Ctrl+c.
+
+[Optional Steps](OPTIONAL.md)
