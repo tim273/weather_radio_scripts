@@ -21,9 +21,9 @@ Nooelec has good RTL SDR kits, this one is fairly small and includes an antenna:
 
 ### OS Install
 
-Once you have all that equipment download Raspbian Jessie Lite from https://www.raspberrypi.org/downloads/raspbian and follow these instructions to put it on the microSD card: https://www.raspberrypi.org/documentation/installation/installing-images/   Once the OS is installed on the SD card, insert it into the Pi, connect the network cable, HDMI to a monitor or TV, and a USB keyboard (mouse not needed).  You can also plug in the RTL SDR and hook it up to the antenna.  Finally, plug in the power.
+Once you have all that equipment download Raspbian Jessie Lite from https://www.raspberrypi.org/downloads/raspbian and follow these instructions to put it on the microSD card: https://www.raspberrypi.org/documentation/installation/installing-images/   Once the OS is installed on the microSD card, insert it into the Pi, connect the network cable, HDMI to a monitor or TV, and a USB keyboard (mouse not needed).  You can also plug in the RTL SDR and hook it up to the antenna.  Finally, plug in the power.
 
-Once booted, log in with username pi and password raspberry, then type:
+Once booted, you will be presented with a log in prompt.  There is no user interface on the lite version of Raspbian because it is not needed since we will be running the Raspberry Pi headless. Log in with username pi and password raspberry, then type:
 
     sudo raspi-config
     
@@ -104,7 +104,7 @@ This will quit without saving changes. Typing : will allow you to search and do 
 
 Copy darkice.cfg from weather_radio_scripts to /etc
 
-    cp ~/weather_radio_scripts/darkice.cfg /etc
+    sudo cp ~/weather_radio_scripts/darkice.cfg /etc
     
 The default is to point to your local Icecast server, you can leave this for now and come back to it to change it.  To do so, edit it this way:
 
@@ -116,10 +116,49 @@ Darkice allows you to stream to up to 8 Icecast/Shoutcast servers from a single 
 
 Next, add an copy the init script for Darkice so it starts on boot:
 
-    cp ~/weather_radio_scripts/darkice /etc/init.d
+    sudo cp ~/weather_radio_scripts/darkice /etc/init.d
     
 Then add Darice to the service mechanism so that it runs automatically at boot:
 
     sudo chmod +x /etc/init.d/darkice
     sudo update-rc.d darkice defaults
 
+### Setup for RTL SDR
+
+The next half of this how-to is for setting up the RTL SDR stick to listen to your local weather radion station and then send it to the loopback ALSA sound card.  Then Darkice stream from the virutal sound card that gets created.  First add the ALSA loopback plugin to the kernel modules by copying modules to the etc directory (we'll backup the existing one first):
+
+    sudo cp /etc/modules /etc/modules.backup
+    sudo cp ~/weather_radio_scripts/modules /etc
+
+Next move the asound.conf to the etc folder:
+
+    sudo cp ~/weather_radio_scripts/asound.conf /etc
+    
+Next copy the rules file for RTL SDR which allows the correct kernel driver to be used:
+
+    sudo cp ~/weather_radio_scripts/20.rtlsdr.rules /etc/udev/rules.d
+    
+The included script which starts the RTL SDR (weather-radio.sh) has three options for streaming.  The first two are commented out, but the last one will pipe to the loopback virtual sound card.  Edit the last line of the script and modify the frequency to match you local weather radio frequency:
+
+    vim ~/weather_radio_scripts/weather-radio.sh
+    
+The first section of that line looks like this:
+
+    rtl_fm -f 162.55M
+
+Change 162.55 to match what your local frequency is.  If you are unsure of your local frequency, you can look it up here: http://www.nws.noaa.gov/nwr/coverage/station_listing.html
+
+Next make the script executable:
+
+    chmod +x ~/weather_radio_scripts/weather-radio.sh
+
+Next copy rc.local to to etc make our script it run at boot in a screen session (we'll backup the existing one first):
+
+    sudo cp /etc/rc.local /etc/rc.local.backup
+    sudo cp ~/weather_radio_scripts/rc.local /etc
+    
+That's it!  Well almost, reboot your Pi and you should have a functioning mount point:
+
+    sudo reboot
+    
+Wait a few minutes and if all goes well, you should be able to go to http://raspberry.pi.ip:8000 (or whatever Icecast server you are pointing to) and see your mount point and hear your weather radio stream!
