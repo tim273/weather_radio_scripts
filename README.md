@@ -6,7 +6,7 @@ This is a guide to set up NOAA streaming weather radio using a Raspberry Pi and 
 
 #### Note: You can also stream using a weather radio.
 
-You can also use a Raspberry Pi with just Darkice and a weather radio, the setup is similar, you would just use a weather radio instead of an RTL SDR stick. I used this setup for a few years to stream to Weather Underground (Raspberry Pi/Darkice/Weather Radio), the instructions are the same except you only need to follow the instructions to install the OS and compile/setup Darkice and skip the RTL SDR setup.  You would also need an external sound card such as this one: https://www.amazon.com/Behringer-UCA202-BEHRINGER-U-CONTROL/dp/B000KW2YEI and then an adapter for your weather radio like this: https://www.amazon.com/gp/product/B0052A2LYG and then an RCA left/right cable.  The trick is to find the right ALSA input to stream from, but I believe I used 'plughw:1,0'.
+You can also use a Raspberry Pi with just Darkice and a weather radio, the setup is similar, you would just use a weather radio instead of an RTL SDR stick. I used this setup for a few years to stream to Weather Underground (Raspberry Pi/Darkice/Weather Radio), the instructions are the same except you only need to follow the instructions to install the OS and compile/setup Darkice and skip the RTL SDR setup.  You would also need an external sound card such as this one: https://www.amazon.com/Behringer-UCA202-BEHRINGER-U-CONTROL/dp/B000KW2YEI and then an adapter for your weather radio like this: https://www.amazon.com/gp/product/B0052A2LYG and then standard stereo RCA cables.  The trick is to find the right ALSA input to stream from, but I believe I used 'plughw:1,0'.
 
 ### Equipment
 
