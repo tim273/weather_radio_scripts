@@ -165,4 +165,3 @@ Wait a few minutes and if all goes well, you should be able to go to http://rasp
 
 [Stopping and Starting Services](SERVICES.md)
 
-[Optional Steps](OPTIONAL.md)
