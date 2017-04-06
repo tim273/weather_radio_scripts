@@ -65,7 +65,7 @@ This will take a few minutes depending on the number of updates.  Once finished 
 
 Wait a couple minutes and then ssh in again.  Install necessary packages:
 
-    sudo apt-get install build-essential devscripts autotools-dev fakeroot dpkg-dev debhelper autotools-dev dh-make quilt ccache libsamplerate0-dev libpulse-dev libaudio-dev lame libjack-jackd2-dev libasound2-dev libtwolame-dev libfaad-dev libflac-dev libmp4v2-dev libshout3-dev libmp3lame-dev vim htop screen git icecast2 libtool-bin rtl-sdr sox libsox-fmt-mp3 ezstream iftop
+    sudo apt-get install build-essential devscripts autotools-dev fakeroot dpkg-dev debhelper autotools-dev dh-make quilt ccache libsamplerate0-dev libpulse-dev libaudio-dev lame libjack-jackd2-dev libasound2-dev libtwolame-dev libfaad-dev libflac-dev libmp4v2-dev libshout3-dev libmp3lame-dev vim htop screen git icecast2 libtool-bin rtl-sdr sox libsox-fmt-mp3 ezstream iftop bc
 
 When it asks about configuring Icecast, just choose the default values for now.  Installing these packages will take several minutes, now would be a good time to get a coffee or take a walk or something.
 
@@ -164,6 +164,10 @@ That's it!  Well almost, reboot your Pi and you should have a functioning mount 
     sudo reboot
     
 Wait a few minutes and if all goes well, you should be able to go to http://raspberry.pi.ip:8000 (or whatever Icecast server you are pointing to) and see your mount point and hear your weather radio stream!
+
+## Extras
+
+There are a couple extra files, ezstream.xml, if you wish to use Ezsteam instead of Darkice an then temp.sh which will display the temperature of the CPU and GPU.  More on that here: https://www.cyberciti.biz/faq/linux-find-out-raspberry-pi-gpu-and-arm-cpu-temperature-command/
 
 [Stopping and Starting Services](SERVICES.md)
 
