@@ -68,7 +68,7 @@ Wait a couple minutes and then ssh in again.  Install necessary packages:
 
     sudo apt-get install build-essential devscripts autotools-dev fakeroot dpkg-dev debhelper autotools-dev dh-make quilt ccache libsamplerate0-dev libpulse-dev libaudio-dev lame libjack-jackd2-dev libasound2-dev libtwolame-dev libfaad-dev libflac-dev libmp4v2-dev libshout3-dev libmp3lame-dev vim htop screen git icecast2 libtool-bin rtl-sdr sox libsox-fmt-mp3 ezstream iftop bc
 
-When it asks about configuring Icecast, just choose the default values for now.  Installing these packages will take several minutes, now would be a good time to get a coffee or take a walk or something.
+Installing these packages will take several minutes, now would be a good time to get a coffee or take a walk or something.  When it asks about configuring Icecast2, just choose the default values for now.  If you plan to expose your Icecast2 server by opening a port, you'll want to change the passwords which you can do by editing /etc/icecast2/icecast.xml and you'll find an authorization section that contains the passwords.  You'll then want to match the source password with the one you use in darkice.cfg. There is more on editing files later. 
 
 ### Download and Compile Darkice
 
@@ -117,13 +117,13 @@ Darkice allows you to stream to up to 8 Icecast/Shoutcast servers from a single 
 
     man darkice.cfg
 
-Next, add an copy the init script for Darkice so it starts on boot:
+Next, copy the init script for Darkice so it starts on boot and make it executable:
 
     sudo cp ~/weather_radio_scripts/darkice /etc/init.d
+    sudo chmod +x /etc/init.d/darkice
     
 Then add Darice to the service mechanism so that it runs automatically at boot:
 
-    sudo chmod +x /etc/init.d/darkice
     sudo update-rc.d darkice defaults
 
 ### Setup for RTL SDR
