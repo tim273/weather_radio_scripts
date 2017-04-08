@@ -25,6 +25,9 @@ Nooelec has good RTL SDR kits, this one is fairly small and includes an antenna:
 
 Once you have all that equipment download Raspbian Jessie Lite from https://www.raspberrypi.org/downloads/raspbian and follow these instructions to put it on the microSD card: https://www.raspberrypi.org/documentation/installation/installing-images/   Once the OS is installed on the microSD card, insert it into the Pi, connect the network cable, HDMI to a monitor or TV, and a USB keyboard (mouse not needed).  You can also plug in the RTL SDR and hook it up to the antenna.  Finally, plug in the power.
 
+#### Tip: Use the tab key for statement completion.
+For example start typing a command like 'ser' and then hit the tab key and it will fill in the rest which is 'service'.  You can also do this with files and directories so if you are about to edit a file you can start typing 'vim /et\<tab\>(it will fill in 'etc')/ini\<tab\>(it will fill in init.d or give you a list of options if there is more than one).  Whenever typing, use tab and it makes things go a lot faster.  I use it ALL the time.
+
 Once booted, you will be presented with a log in prompt.  There is no user interface on the lite version of Raspbian because it is not needed since we will be running the Raspberry Pi headless. Log in with username pi and password raspberry, then type:
 
     sudo raspi-config
