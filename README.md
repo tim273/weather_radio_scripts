@@ -168,7 +168,7 @@ Wait a few minutes and if all goes well, you should be able to go to http://rasp
 
 ## Extras
 
-There are a couple extra files, ezstream.xml, if you wish to use Ezsteam instead of Darkice an then temp.sh which will display the temperature of the CPU and GPU.  More on that here: https://www.cyberciti.biz/faq/linux-find-out-raspberry-pi-gpu-and-arm-cpu-temperature-command/
+There are a couple extra files, ezstream.xml, if you wish to use Ezsteam instead of Darkice and then temp.sh which will display the temperature of the CPU and GPU.  More on that here: https://www.cyberciti.biz/faq/linux-find-out-raspberry-pi-gpu-and-arm-cpu-temperature-command/
 
 [Stopping and Starting Services](SERVICES.md)
 
