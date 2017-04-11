@@ -17,9 +17,24 @@ MicroSD: http://www.microcenter.com/product/366176/16GB_microSDHC_Class_10_Flash
 Raspberry Pi and Case: http://www.microcenter.com/product/461230/Raspberry_Pi_3_Model_B_Board_and_Case_Kit
 Power Supply: http://www.microcenter.com/product/461596/25Amp_51v_Switching_Power_Supply_for_Raspberry_Pi_B_with_Built-in_4ft_Micro-USB_Cable
 
-Since this Pi is going to be streaming 24/7, you'll also want an Ethernet cable to connect to your modem/router as WiFi is not reliable enough.  Amazon or Micro Center has various lengths of Cat 5e cable at reasonable prices.
+Since this Pi is going to be streaming 24/7, you'll also want an ethernet cable to connect to your modem/router as WiFi is generally not reliable enough to work 24/7.  Amazon or Micro Center has various lengths of Cat 5e cable at reasonable prices.
 
-Nooelec has good RTL SDR kits, this one is fairly small and includes an antenna: http://www.nooelec.com/store/sdr/sdr-receivers/nesdr/nesdr-mini2-rtl2832u-r820t2.html.  If you can't get good reception with the included antenna, you could strip off the jacket of some standard TV coax and expose 17 1/4 inches of bare center wire, then mount that somewhere up high indoors (like an attic).
+Nooelec has good RTL SDR kits, this one is fairly small and includes an antenna: http://www.nooelec.com/store/sdr/sdr-receivers/nesdr/nesdr-mini2-rtl2832u-r820t2.html.  An optional purchase would be the metal case: http://www.nooelec.com/store/nesdr-enclosure-207.html which helps with radio frequency interference (RFI).
+
+### The Antenna
+
+If you can't get good reception with the included antenna, you could strip off the jacket of some standard TV coax and expose 17 1/4 inches of bare center wire, then mount that somewhere up high indoors (like an attic), or build a 1/4 wave ground plane antenna (more on that here: http://www.hamuniverse.com/2metergp.html) and that can be mounted using 1 or 1 1/2 inch PVC pipe with a cap.  Just drill a hole in the cap to fit the threaded end of the SO 239 connector and the connect the coax from the other side.  Here the parts you need to build a 1/4 ground plane antenna:
+
+SO 239: https://www.amazon.com/Female-Chassis-Flange-Solder-Connector/dp/B007Q8JH4Y
+Wire: You can use a couple things #12/#10 copper house wiring or galvanzed steel wire
+Soldering Iron: You'll want a good soldering iron like this one: https://www.amazon.com/Weller-D650-Industrial-Soldering-Gun/dp/B000JEGEC0
+
+Alternatively you could purchase this anteanna if you're not comfortable building your own: http://www.jpole-antenna.com/shop/product-category/weather-band/
+
+If you build or purchase an external antenna, you'll need these adapters:
+
+Coax Cable: https://www.amazon.com/50ft-Rg8x-Pl259-Antenna-Cable/dp/B00D66RDYQ (you can get a shorter length if need be)
+Adapters: http://www.nooelec.com/store/male-mcx-to-male-sma-pigtail-rg316-0-5-length.html and https://www.amazon.com/LINGLING-ONE-Coaxial-Adapter-Female/dp/B06XF7W38M
 
 ### OS Install
 
