@@ -24,6 +24,10 @@ Since this Pi is going to be streaming 24/7, you'll also want an ethernet cable 
 
 Nooelec has good RTL SDR kits, this one is fairly small and includes an antenna: http://www.nooelec.com/store/sdr/sdr-receivers/nesdr/nesdr-mini2-rtl2832u-r820t2.html.  An optional purchase would be the metal case: http://www.nooelec.com/store/nesdr-enclosure-207.html which helps with radio frequency interference (RFI).
 
+#### Optional: Use Power over Ethernet (PoE)
+
+The Raspberry Pi works very well with Power Over Ethernet if you wish to put it somewhere where there is no power outlet available.  You'll need a PoE injector: https://www.amazon.com/TP-LINK-TL-PoE150S-Injector-Adapter-compliant/dp/B001PS9E5I/ and a splitter: https://www.amazon.com/gp/product/B019BLMWWW.  There are also PoE switches available such as this one: https://www.amazon.com/dp/B01MRO4M73 If you get a PoE switch, you will not need the injector, but will still need the splitter. Using PoE will combine the power and ethernet into one cable and you will not need a power supply for the Raspberry Pi.  It allows for putting this setup in a closet or somewhere else out of sight. 
+
 ### The Antenna
 
 If you can't get good reception with the included antenna, you could strip off the jacket of some standard TV coax and expose 17 1/4 inches of bare center wire, then mount that somewhere up high indoors (like an attic), or build a 1/4 wave ground plane antenna (more on that here: http://www.hamuniverse.com/2metergp.html) and that can be mounted using 1 or 1 1/2 inch PVC pipe with a cap.  Just drill a hole in the cap to fit the threaded end of the SO 239 connector and the connect the coax from the other side.  Here the parts you need to build a 1/4 ground plane antenna:
