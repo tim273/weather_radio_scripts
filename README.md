@@ -1,4 +1,4 @@
-# Streaming to Multiple Icecast2 Servers with RTL SDR and Darkice
+# Streaming NOAA Weather Radio to Multiple Icecast2 Servers with RTL SDR and Darkice
 
 ### Introduction
 
