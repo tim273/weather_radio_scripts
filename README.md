@@ -45,7 +45,7 @@ Adapters: http://www.nooelec.com/store/male-mcx-to-male-sma-pigtail-rg316-0-5-le
 
 ### OS Install
 
-Once you have all that equipment download Raspbian Jessie Lite from https://www.raspberrypi.org/downloads/raspbian and follow these instructions to put it on the microSD card: https://www.raspberrypi.org/documentation/installation/installing-images/   Once the OS is installed on the microSD card, insert it into the Pi, connect the network cable, HDMI to a monitor or TV, and a USB keyboard (mouse not needed).  You can also plug in the RTL SDR and hook it up to the antenna.  Finally, plug in the power.
+Once you have all that equipment download the latest Raspbian Lite image from https://www.raspberrypi.org/downloads/raspbian and follow these instructions to put it on the microSD card: https://www.raspberrypi.org/documentation/installation/installing-images/   Once the OS is installed on the microSD card, insert it into the Pi, connect the network cable, HDMI to a monitor or TV, and a USB keyboard (mouse not needed).  You can also plug in the RTL SDR and hook it up to the antenna.  Finally, plug in the power.
 
 #### Tip: Use the tab key for statement completion.
 For example start typing a command like 'ser' and then hit the tab key and it will fill in the rest which is 'service'.  You can also do this with files and directories so if you are about to edit a file you can start typing 'vim /et\<tab\>(it will fill in 'etc')/ini\<tab\>(it will fill in init.d or give you a list of options if there is more than one).  Whenever typing, use tab and it makes things go a lot faster.  I use it ALL the time.
@@ -59,7 +59,7 @@ Once booted, you will be presented with a log in prompt.  There is no user inter
 * Select Yes to enable SSH
 * At the main menu, select 7 Advanced Options
 * Select A3 Memory Split
-* Type in 16 and select Ok
+* Type in 8 and select Ok
 
 #### Optional: From the main menu
 
