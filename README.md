@@ -16,8 +16,8 @@ Purchase a Raspberry Pi from Amazon: https://www.amazon.com/CanaKit-Raspberry-Cl
 
 Micro Center also carries Raspberry Pi's and everything else you'll need:
 
-MicroSD: http://www.microcenter.com/product/366176/16GB_microSDHC_Class_10_Flash_Memory_Card (I've used Micro Center microSD cards in all my Raspberry Pi's without any problems, they're cheap and reliable.  I also have a Micro Center near me though).
-Raspberry Pi and Case: http://www.microcenter.com/product/461230/Raspberry_Pi_3_Model_B_Board_and_Case_Kit
+MicroSD: http://www.microcenter.com/product/366176/16GB_microSDHC_Class_10_Flash_Memory_Card (I've used Micro Center microSD cards in all my Raspberry Pi's without any problems, they're cheap and reliable.  I also have a Micro Center near me though).  
+Raspberry Pi and Case: http://www.microcenter.com/product/461230/Raspberry_Pi_3_Model_B_Board_and_Case_Kit  
 Power Supply: http://www.microcenter.com/product/461596/25Amp_51v_Switching_Power_Supply_for_Raspberry_Pi_B_with_Built-in_4ft_Micro-USB_Cable
 
 Since this Pi is going to be streaming 24/7, you'll also want an ethernet cable to connect to your modem/router as WiFi is generally not reliable enough to work 24/7.  Amazon or Micro Center has various lengths of Cat 5e cable at reasonable prices.
@@ -40,7 +40,7 @@ Alternatively you could purchase this anteanna if you're not comfortable buildin
 
 If you build or purchase an external antenna, you'll need these adapters:
 
-Coax Cable: https://www.amazon.com/50ft-Rg8x-Pl259-Antenna-Cable/dp/B00D66RDYQ (you can get a shorter length if need be)
+Coax Cable: https://www.amazon.com/50ft-Rg8x-Pl259-Antenna-Cable/dp/B00D66RDYQ (you can get a shorter length if need be)  
 Adapters: http://www.nooelec.com/store/male-mcx-to-male-sma-pigtail-rg316-0-5-length.html and https://www.amazon.com/LINGLING-ONE-Coaxial-Adapter-Female/dp/B06XF7W38M
 
 ### OS Install
@@ -118,15 +118,15 @@ I like using vim for text editing, that's just me I'm old school, :grin: you can
 
 Here's a quick vim rundown:
 
-vim test.txt
-i (i for insert or a for add)
-Type: "Here's my text"
-Esc (takes you out of insert/add mode)
+vim test.txt  
+i (i for insert or a for add)  
+Type: "Here's my text"  
+Esc (takes you out of insert/add mode)  
 :wq (w for write q for quit)
 
 If you don't know what's going on hit Esc a few times and start over.  If you make changes and screw up and don't want to save type
 
-:q!
+    :q!
 
 This will quit without saving changes. Typing : will allow you to search and do other things as well.  Here's more info: https://www.linux.com/learn/vim-101-beginners-guide-vim
 
