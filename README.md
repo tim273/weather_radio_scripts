@@ -32,8 +32,8 @@ The Raspberry Pi works very well with Power Over Ethernet (PoE), in the case whe
 
 If you can't get good reception with the included antenna, you could strip off the jacket of some standard TV coax and expose 17 1/4 inches of bare center wire, then mount that somewhere up high indoors (like an attic), or build a 1/4 wave ground plane antenna (more on that here: http://www.hamuniverse.com/2metergp.html) and that can be mounted using 1 or 1 1/2 inch PVC pipe with a cap.  Just drill a hole in the cap to fit the threaded end of the SO 239 connector and the connect the coax from the other side.  Here the parts you need to build a 1/4 ground plane antenna:
 
-SO 239: https://www.amazon.com/Female-Chassis-Flange-Solder-Connector/dp/B007Q8JH4Y
-Wire: You can use a couple things #12/#10 copper house wiring or galvanzed steel wire
+SO 239: https://www.amazon.com/Female-Chassis-Flange-Solder-Connector/dp/B007Q8JH4Y  
+Wire: You can use a couple things #12/#10 copper house wiring or galvanzed steel wire  
 Soldering Iron: You'll want a good soldering iron like this one: https://www.amazon.com/Weller-D650-Industrial-Soldering-Gun/dp/B000JEGEC0
 
 Alternatively you could purchase this anteanna if you're not comfortable building your own: http://www.jpole-antenna.com/shop/product-category/weather-band/
