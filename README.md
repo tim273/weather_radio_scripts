@@ -151,7 +151,7 @@ Next, copy the init script for Darkice so it starts on boot and make it executab
     
 Then add Darice to the service mechanism so that it runs automatically at boot:
 
-    sudo update-rc.d darkice defaults
+    sudo systemctl enable darkice
 
 ### Setup for RTL SDR
 
