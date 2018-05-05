@@ -12,12 +12,12 @@ You can also use a Raspberry Pi with just Darkice and a weather radio, the setup
 
 ### Equipment
 
-Purchase a Raspberry Pi from Amazon: https://www.amazon.com/CanaKit-Raspberry-Clear-Power-Supply/dp/B01C6EQNNK you'll also need a microSD card, preferably class 10: https://www.amazon.com/SanDisk-Ultra-Micro-Adapter-SDSQUNC-016G-GN6MA/dp/B010Q57SEE/
+Purchase a Raspberry Pi from Amazon: https://www.amazon.com/CanaKit-Raspberry-Premium-Clear-Supply/dp/B07BC7BMHY you'll also need a microSD card, preferably class 10: https://www.amazon.com/SanDisk-Ultra-Micro-Adapter-SDSQUNC-016G-GN6MA/dp/B010Q57SEE/
 
 Micro Center also carries Raspberry Pi's and everything else you'll need:
 
-MicroSD: http://www.microcenter.com/product/366176/16GB_microSDHC_Class_10_Flash_Memory_Card (I've used Micro Center microSD cards in all my Raspberry Pi's without any problems, they're cheap and reliable.  I also have a Micro Center near me though).
-Raspberry Pi and Case: http://www.microcenter.com/product/461230/Raspberry_Pi_3_Model_B_Board_and_Case_Kit
+MicroSD: http://www.microcenter.com/product/366176/16GB_microSDHC_Class_10_Flash_Memory_Card (I've used Micro Center microSD cards in all my Raspberry Pi's without any problems, they're cheap and reliable.  I also have a Micro Center near me though).  
+Raspberry Pi and Case: http://www.microcenter.com/search/search_results.aspx?Ntt=Raspberry+Pi+3+Model+B%2b 
 Power Supply: http://www.microcenter.com/product/461596/25Amp_51v_Switching_Power_Supply_for_Raspberry_Pi_B_with_Built-in_4ft_Micro-USB_Cable
 
 Since this Pi is going to be streaming 24/7, you'll also want an ethernet cable to connect to your modem/router as WiFi is generally not reliable enough to work 24/7.  Amazon or Micro Center has various lengths of Cat 5e cable at reasonable prices.
@@ -28,19 +28,21 @@ Nooelec has good RTL SDR kits, this one is fairly small and includes an antenna:
 
 The Raspberry Pi works very well with Power Over Ethernet (PoE), in the case where you want to put it somewhere where there is no power outlet available or in a closet or somewhere else out of sight.  You'll need a PoE injector: https://www.amazon.com/TP-LINK-TL-PoE150S-Injector-Adapter-compliant/dp/B001PS9E5I/ and a splitter: https://www.amazon.com/gp/product/B019BLMWWW.  There are also PoE switches available such as this one: https://www.amazon.com/dp/B01MRO4M73 If you get a PoE switch, you will not need the injector, but will still need the splitter. Using PoE will combine the power and ethernet into one cable and you will not need a power supply for the Raspberry Pi.
 
+Starting with the Raspberry Pi 3 B+ model, there is built in support for PoE with the official PoE hat (https://www.raspberrypi.org/products/poe-hat/ coming soon as of this writing), this would eliminate the need for a splitter and if you have a PoE switch (see link above), you could plug your cable directly from the switch to the Raspberry Pi.
+
 ### The Antenna
 
 If you can't get good reception with the included antenna, you could strip off the jacket of some standard TV coax and expose 17 1/4 inches of bare center wire, then mount that somewhere up high indoors (like an attic), or build a 1/4 wave ground plane antenna (more on that here: http://www.hamuniverse.com/2metergp.html) and that can be mounted using 1 or 1 1/2 inch PVC pipe with a cap.  Just drill a hole in the cap to fit the threaded end of the SO 239 connector and the connect the coax from the other side.  Here the parts you need to build a 1/4 ground plane antenna:
 
-SO 239: https://www.amazon.com/Female-Chassis-Flange-Solder-Connector/dp/B007Q8JH4Y
-Wire: You can use a couple things #12/#10 copper house wiring or galvanzed steel wire
+SO 239: https://www.amazon.com/Female-Chassis-Flange-Solder-Connector/dp/B007Q8JH4Y  
+Wire: You can use a couple things #12/#10 copper house wiring or galvanzed steel wire  
 Soldering Iron: You'll want a good soldering iron like this one: https://www.amazon.com/Weller-D650-Industrial-Soldering-Gun/dp/B000JEGEC0
 
 Alternatively you could purchase this anteanna if you're not comfortable building your own: http://www.jpole-antenna.com/shop/product-category/weather-band/
 
 If you build or purchase an external antenna, you'll need these adapters:
 
-Coax Cable: https://www.amazon.com/50ft-Rg8x-Pl259-Antenna-Cable/dp/B00D66RDYQ (you can get a shorter length if need be)
+Coax Cable: https://www.amazon.com/50ft-Rg8x-Pl259-Antenna-Cable/dp/B00D66RDYQ (you can get a shorter length if need be)  
 Adapters: http://www.nooelec.com/store/male-mcx-to-male-sma-pigtail-rg316-0-5-length.html and https://www.amazon.com/LINGLING-ONE-Coaxial-Adapter-Female/dp/B06XF7W38M
 
 ### OS Install
@@ -118,15 +120,15 @@ I like using vim for text editing, that's just me I'm old school, :grin: you can
 
 Here's a quick vim rundown:
 
-vim test.txt
-i (i for insert or a for add)
-Type: "Here's my text"
-Esc (takes you out of insert/add mode)
+vim test.txt  
+i (i for insert or a for add)  
+Type: "Here's my text"  
+Esc (takes you out of insert/add mode)  
 :wq (w for write q for quit)
 
 If you don't know what's going on hit Esc a few times and start over.  If you make changes and screw up and don't want to save type
 
-:q!
+    :q!
 
 This will quit without saving changes. Typing : will allow you to search and do other things as well.  Here's more info: https://www.linux.com/learn/vim-101-beginners-guide-vim
 
@@ -149,7 +151,7 @@ Next, copy the init script for Darkice so it starts on boot and make it executab
     
 Then add Darice to the service mechanism so that it runs automatically at boot:
 
-    sudo update-rc.d darkice defaults
+    sudo systemctl enable darkice
 
 ### Setup for RTL SDR
 
