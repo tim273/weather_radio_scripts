@@ -17,5 +17,5 @@ if [ "$_IP" ]; then
   printf "My IP address is %s\n" "$_IP"
 fi
 
-screen -d -m sh -c 'cd /home/pi/weather_radio_scripts; ./weather-radio.sh; exec bash'
+screen -S rtl_sdr -d -m sh -c 'cd /home/pi/weather_radio_scripts; ./weather-radio.sh; exec bash'
 exit 0
