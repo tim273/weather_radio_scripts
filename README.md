@@ -232,7 +232,7 @@ Next restart Nginx:
 
     sudo service nginx restart
     
-Then test your url by going to http://www.mydomain.com/some/path.  You should be able to listen to your stream.  Congratulations!! You just proxied your Icecast server through Nginx!  You can also do this with Apache, but it's way easier this way.
+Then test your url by going to http://www.mydomain.com/some/path (substituting the changes to the domain and path from above).  You should be able to listen to your stream.  Congratulations!! You just proxied your Icecast server through Nginx!  You can also do this with Apache, but it's way easier this way.
 
 ### Create an SSL certificate
 
