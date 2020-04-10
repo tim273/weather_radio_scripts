@@ -221,18 +221,50 @@ Next edit /etc/nginx/sites-enables/default and find the following:
 This is the main location directive.  Add this below it:
 
     location /some/path {
-            proxy_pass http://0.0.0.0:8000/your/mount/url;
+            proxy_pass http://127.0.0.1:8000/your/mount/url;
     }
 
-Change "/some/path" to whatever you would like so for example the proxied URL would be http://your.domain/some/path You can also add .mp3 to the end if you would like.  Then change /your/mount/url to whatever your Icecast mount URL is.  Also the semi-colon is important, without it there will be an error and Nginx won't restart.
+Change "/some/path" to whatever you would like so for example the proxied URL would be http://your.domain/some/path You can also add .mp3 to the end if you would like (http://your.domain/some/path.mp3).  Then change "/your/mount/url" to whatever your Icecast mount URL is.  Also the semi-colon is important, without it there will be an error and Nginx won't restart.
 
 Next restart Nginx:
 
     sudo service nginx restart
     
-Then test your url by going to http://your.domain/some/path (using your domain and the path you created).  You should be able to listen to your stream.  Congradulations!! You just proxied your Icecast server through Nginx!  You can also do this with Apache, but it's way easier this way.
+Then test your url by going to http://your.domain/some/path (using your domain and the path you created).  You should be able to listen to your stream.  Congratulations!! You just proxied your Icecast server through Nginx!  You can also do this with Apache, but it's way easier this way.
 
 ### Create an SSL certificate
+
+You can get a free SSL certificate from Let's Encrypt using Certbot which will automate the process for you and makes it really easy.  Start by going to https://certbot.eff.org/ and where it says "My HTTP website is running" choose Nginx and choose "Debian 10 (buster)" for the "on" section.  Then follow the instructions to install Certbot under the default tab.
+
+Once the all the software is installed choose first instruction under #3 to get and install your certificates. 
+
+    sudo certbot --nginx
+    
+It will ask for your email address, this is for expiration notifications, enter that in and then agree to the terms of service.  It will ask if you are willing to share your email address, you can choose either yes or no here.
+
+Next enter your full registered registered domain name.  This would be the same domain as used for the above URL, so if you entered http://www.mydomain.com, enter "www.mydomain.com" for the domain (without the quotes).
+
+Then it will create and install the certificate.  Once that is done it will ask you if you want an automatic redirect to https (usually #2).  I suggest choosing that and if you enter www.mydomain.com it will automatically redirect to https://www.mydomain.com
+
+Then restart nginx:
+
+    sudo service nginx restart
+    
+Then enter your url http://www.mydomain.com/some/path in a browser.  It should automatically redirect to https and if you click on the lock icon you should see your certificate information.  
+
+That's it!  You've got a secure radio stream!  
+
+### Certificate Renewal
+
+The certificate from Let's Encrypt only lasts 3 months, but certbot installs a cron job that runs every 12 hours to check your certificate and renew if needed.  If for some reason that doesn't work, you'll get an email a month or so in advance letting you know it's time to renew.  But this shouldn't be an issue with certbot.
+
+You can also run this command to make sure it works:
+
+    sudo certbot renew --dry-run
+    
+On the certbot website mentioned above step 4 talks about automatic renewal and where the cron job is.  And then there's  step 5 to test your certificate.
+
+The other option to achive an SSL stream is to compile Icecast from source, but that is problematic.  I find this way much eaiser as Nginx is used primarly as a load balancer so proxying is what it does best.
 
 ## Extras
 
