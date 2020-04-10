@@ -199,7 +199,7 @@ There's a couple ways to do this, but I'm going to describe how to do it with a 
 
     sudo apt install nginx
     
-Then you should be able to go to http://your.domain and see something like this:
+Then you should be able to go to http://www.mydomain.com (substituting the domain that your icecast server is on) and see something like this:
 
 ### Welcome to nginx!
 
@@ -209,6 +209,8 @@ For online documentation and support please refer to nginx.org.
 Commercial support is available at nginx.com.
 
 *Thank you for using nginx.*
+
+If that doesn't work, check your port forwarding on your router and make sure both 80 and 443 are pointed to your machine.  You can also check to make sure your domain is pointed to your local network.  
 
 Next edit /etc/nginx/sites-enables/default and find the following:
 
@@ -221,22 +223,22 @@ Next edit /etc/nginx/sites-enables/default and find the following:
 This is the main location directive.  Add this below it:
 
     location /some/path {
-            proxy_pass http://127.0.0.1:8000/your/mount/url;
+        proxy_pass http://127.0.0.1:8000/your/mount/url;
     }
 
-Change "/some/path" to whatever you would like so for example the proxied URL would be http://your.domain/some/path You can also add .mp3 to the end if you would like (http://your.domain/some/path.mp3).  Then change "/your/mount/url" to whatever your Icecast mount URL is.  Also the semi-colon is important, without it there will be an error and Nginx won't restart.
+Change "/some/path" to whatever you would like so for example the proxied URL would be http://www.mydomain.com/some/path You can also add .mp3 to the end if you would like (http://www.mydomain.com/some/path.mp3).  Then change "/your/mount/url" to whatever your Icecast mount URL is.  Also the semi-colon is important, without it there will be an error and Nginx won't restart.
 
 Next restart Nginx:
 
     sudo service nginx restart
     
-Then test your url by going to http://your.domain/some/path (using your domain and the path you created).  You should be able to listen to your stream.  Congratulations!! You just proxied your Icecast server through Nginx!  You can also do this with Apache, but it's way easier this way.
+Then test your url by going to http://www.mydomain.com/some/path.  You should be able to listen to your stream.  Congratulations!! You just proxied your Icecast server through Nginx!  You can also do this with Apache, but it's way easier this way.
 
 ### Create an SSL certificate
 
 You can get a free SSL certificate from Let's Encrypt using Certbot which will automate the process for you and makes it really easy.  Start by going to https://certbot.eff.org/ and where it says "My HTTP website is running" choose Nginx and choose "Debian 10 (buster)" (if you have a Raspberry Pi, or other OS depending on what you have installed.) for the "on" section.  Then follow the instructions to install Certbot under the default tab.
 
-Once the all the software is installed choose first instruction under #3 to get and install your certificates. 
+Once the all the software is installed choose the first instruction under #3 to get and install your certificates. 
 
     sudo certbot --nginx
     
