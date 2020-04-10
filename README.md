@@ -195,7 +195,7 @@ Wait a few minutes and if all goes well, you should be able to go to http://rasp
 
 ## Setting up SSL for Your Stream
 
-There's a couple ways to do this, but I'm going to describe how to do it with a proxy pass using Nginx.  This is going to assume that you have a domain that you have pointed to your IP address to your local network and have port forwarded ports 80 and 443 to your Raspberry Pi (or other machine).  Start by installing Nginx on the same machine as your Icecast server:
+There's a couple ways to do this, but I'm going to describe how to do it with a proxy pass using Nginx.  This is going to assume that you have a domain that you have pointed to the IP address of your local/home network and have port forwarded ports 80 and 443 to your Raspberry Pi (or other machine).  Start by installing Nginx on the same machine as your Icecast server:
 
     sudo apt install nginx
     
@@ -234,7 +234,7 @@ Then test your url by going to http://your.domain/some/path (using your domain a
 
 ### Create an SSL certificate
 
-You can get a free SSL certificate from Let's Encrypt using Certbot which will automate the process for you and makes it really easy.  Start by going to https://certbot.eff.org/ and where it says "My HTTP website is running" choose Nginx and choose "Debian 10 (buster)" for the "on" section.  Then follow the instructions to install Certbot under the default tab.
+You can get a free SSL certificate from Let's Encrypt using Certbot which will automate the process for you and makes it really easy.  Start by going to https://certbot.eff.org/ and where it says "My HTTP website is running" choose Nginx and choose "Debian 10 (buster)" (if you have a Raspberry Pi, or other OS depending on what you have installed.) for the "on" section.  Then follow the instructions to install Certbot under the default tab.
 
 Once the all the software is installed choose first instruction under #3 to get and install your certificates. 
 
