@@ -193,6 +193,47 @@ That's it!  Well almost, reboot your Pi and you should have a functioning mount 
     
 Wait a few minutes and if all goes well, you should be able to go to http://raspberry.pi.ip:8000 (or whatever Icecast server you are pointing to) and see your mount point and hear your weather radio stream!
 
+## Setting up SSL for Your Stream
+
+There's a couple ways to do this, but I'm going to describe how to do it with a proxy pass using Nginx.  This is going to assume that you have a domain that you have pointed to your IP address to your local network and have port forwarded ports 80 and 443 to your Raspberry Pi (or other machine).  Start by installing Nginx on the same machine as your Icecast server:
+
+    sudo apt install nginx
+    
+Then you should be able to go to http://your.domain and see something like this:
+
+### Welcome to nginx!
+
+If you see this page, the nginx web server is successfully installed and working. Further configuration is required.
+
+For online documentation and support please refer to nginx.org.
+Commercial support is available at nginx.com.
+
+*Thank you for using nginx.*
+
+Next edit /etc/nginx/sites-enables/default and find the following:
+
+    location / {
+        # First attempt to serve request as file, then
+        # as directory, then fall back to displaying a 404.
+        try_files $uri $uri/ =404;
+    }
+
+This is the main location directive.  Add this below it:
+
+    location /some/path {
+            proxy_pass http://0.0.0.0:8000/your/mount/url;
+    }
+
+Change "/some/path" to whatever you would like so for example the proxied URL would be http://your.domain/some/path You can also add .mp3 to the end if you would like.  Then change /your/mount/url to whatever your Icecast mount URL is.  Also the semi-colon is important, without it there will be an error and Nginx won't restart.
+
+Next restart Nginx:
+
+    sudo service nginx restart
+    
+Then test your url by going to http://your.domain/some/path (using your domain and the path you created).  You should be able to listen to your stream.  Congradulations!! You just proxied your Icecast server through Nginx!  You can also do this with Apache, but it's way easier this way.
+
+### Create an SSL certificate
+
 ## Extras
 
 There are a couple extra files, ezstream.xml, if you wish to use Ezsteam instead of Darkice and then temp.sh which will display the temperature of the CPU and GPU.  More on that here: https://www.cyberciti.biz/faq/linux-find-out-raspberry-pi-gpu-and-arm-cpu-temperature-command/
