@@ -199,7 +199,7 @@ There's a couple ways to do this, but I'm going to describe how to do it with a 
 
     sudo apt install nginx
     
-Then you should be able to go to http://www.mydomain.com (substituting the domain that your icecast server is on) and see something like this:
+Then you should be able to go to http://www.mydomain.com (substituting the domain that you have pointed to your home/local IP address) and see something like this:
 
 ### Welcome to nginx!
 
