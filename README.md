@@ -223,8 +223,8 @@ Next edit /etc/nginx/sites-enables/default and find the following:
 This is the main location directive.  Add this below it:
 
     location /some/path {
-        proxy_pass http://127.0.0.1:8000/your/mount/url;
         proxy_set_header X-Real-IP $remote_addr;
+        proxy_pass http://127.0.0.1:8000/your/mount/url;
     }
 
 Change "/some/path" to whatever you would like so for example the proxied URL would be http://www.mydomain.com/some/path You can also add .mp3 to the end if you would like (http://www.mydomain.com/some/path.mp3).  Then change "/your/mount/url" to whatever your Icecast mount URL is.  Also the semi-colon is important, without it there will be an error and Nginx won't restart.
