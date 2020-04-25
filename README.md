@@ -195,7 +195,7 @@ Wait a few minutes and if all goes well, you should be able to go to http://rasp
 
 ## Setting up SSL for Your Stream
 
-There's a couple ways to do this, but I'm going to describe how to do it with a proxy pass using Nginx.  This is going to assume that you have a domain that you have pointed to the IP address of your local/home network and have port forwarded ports 80 and 443 to your Raspberry Pi (or other machine).  Start by installing Nginx on the same machine as your Icecast server:
+There's a couple ways to do this, but I'm going to describe how to do it with a proxy pass using Nginx.  This is going to assume that you have a domain that you have pointed to the IP address of your local/home network and have port forwarded ports 80 and 443 to your Raspberry Pi (or other machine) that is running your Icecast radio stream.  Start by installing Nginx on the same machine as your Icecast server:
 
     sudo apt install nginx
     
