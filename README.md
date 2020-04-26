@@ -21,7 +21,7 @@ You'll need a Raspberry Pi 4, Case and Power Supply: https://www.microcenter.com
 
 Since this Pi is going to be streaming 24/7, you'll also want an ethernet cable to connect to your modem/router as WiFi is generally not reliable enough to work 24/7.  Amazon or Micro Center has various lengths of Cat 5e cable at reasonable prices.
 
-Nooelec has good RTL SDR kits, this one is fairly small and includes an antenna: http://www.nooelec.com/store/sdr/sdr-receivers/nesdr/nesdr-mini2-rtl2832u-r820t2.html.  An optional purchase would be the metal case: http://www.nooelec.com/store/nesdr-enclosure-207.html which helps with radio frequency interference (RFI).
+Nooelec has good RTL SDR kits, this one is fairly small and includes an antenna: https://www.nooelec.com/store/sdr/sdr-receivers/nesdr-smartee.html.
 
 #### Optional: Use Power over Ethernet (PoE)
 
@@ -37,7 +37,7 @@ SO 239: https://www.amazon.com/Female-Chassis-Flange-Solder-Connector/dp/B007Q8J
 Wire: You can use a couple things #12/#10 copper house wiring or galvanzed steel wire  
 Soldering Iron: You'll want a good soldering iron like this one: https://www.amazon.com/Weller-D650-Industrial-Soldering-Gun/dp/B000JEGEC0
 
-Alternatively you could purchase this anteanna if you're not comfortable building your own: http://www.jpole-antenna.com/shop/product-category/weather-band/
+Alternatively you could purchase this antenna if you're not comfortable building your own: http://www.jpole-antenna.com/shop/product-category/weather-band/
 
 If you build or purchase an external antenna, you'll need these adapters:
 
