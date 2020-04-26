@@ -12,13 +12,12 @@ You can also use a Raspberry Pi with just Darkice and a weather radio, the setup
 
 ### Equipment
 
-Purchase a Raspberry Pi from Amazon: https://www.amazon.com/CanaKit-Raspberry-Premium-Clear-Supply/dp/B07BC7BMHY you'll also need a microSD card, preferably class 10: https://www.amazon.com/SanDisk-Ultra-Micro-Adapter-SDSQUNC-016G-GN6MA/dp/B010Q57SEE/
+Purchase a Raspberry Pi from Amazon: https://www.amazon.com/CanaKit-Raspberry-4GB-Starter-Kit/dp/B07V5JTMV9 (choose any of 1,2 or 4 GB models) you'll also need a microSD card, preferably class 10: https://www.amazon.com/SanDisk-Ultra-Micro-Adapter-SDSQUNC-016G-GN6MA/dp/B010Q57SEE/
 
 Micro Center also carries Raspberry Pi's and everything else you'll need:
 
 MicroSD: http://www.microcenter.com/product/366176/16GB_microSDHC_Class_10_Flash_Memory_Card (I've used Micro Center microSD cards in all my Raspberry Pi's without any problems, they're cheap and reliable.  I also have a Micro Center near me though).  
-Raspberry Pi and Case: http://www.microcenter.com/search/search_results.aspx?Ntt=Raspberry+Pi+3+Model+B%2b 
-Power Supply: http://www.microcenter.com/product/461596/25Amp_51v_Switching_Power_Supply_for_Raspberry_Pi_B_with_Built-in_4ft_Micro-USB_Cable
+You'll need a Raspberry Pi 4, Case and Power Supply: https://www.microcenter.com/search/search_results.aspx?N=&cat=&Ntt=raspberry+pi+4  You'll also need a micro HDMI adapter.
 
 Since this Pi is going to be streaming 24/7, you'll also want an ethernet cable to connect to your modem/router as WiFi is generally not reliable enough to work 24/7.  Amazon or Micro Center has various lengths of Cat 5e cable at reasonable prices.
 
