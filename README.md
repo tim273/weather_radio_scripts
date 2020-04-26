@@ -21,7 +21,7 @@ You'll need a Raspberry Pi 4, Case and Power Supply: https://www.microcenter.com
 
 Since this Pi is going to be streaming 24/7, you'll also want an ethernet cable to connect to your modem/router as WiFi is generally not reliable enough to work 24/7.  Amazon or Micro Center has various lengths of Cat 5e cable at reasonable prices.
 
-Nooelec has good RTL SDR kits, this one is fairly small and includes an antenna: https://www.nooelec.com/store/sdr/sdr-receivers/nesdr-smartee.html.
+Nooelec has good RTL SDR kits, this one is fairly small and includes an antenna: https://www.nooelec.com/store/sdr/sdr-receivers/nesdr-smart.html.
 
 #### Optional: Use Power over Ethernet (PoE)
 
