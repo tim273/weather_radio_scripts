@@ -81,8 +81,8 @@ Optional step: Create an SSH key pair so that you don't have to enter your usern
 
 Next update your pi:
 
-    sudo apt-get update
-    sudo apt-get dist-upgrade
+    sudo apt update
+    sudo apt dist-upgrade
     
 This will take a few minutes depending on the number of updates.  Once finished reboot just in case there are any kernel updates.
 
@@ -92,7 +92,7 @@ This will take a few minutes depending on the number of updates.  Once finished 
 
 Wait a couple minutes and then ssh in again.  Install necessary packages:
 
-    sudo apt-get install build-essential devscripts autotools-dev fakeroot dpkg-dev debhelper autotools-dev dh-make quilt ccache libsamplerate0-dev libpulse-dev libaudio-dev lame libjack-jackd2-dev libasound2-dev libtwolame-dev libfaad-dev libflac-dev libmp4v2-dev libshout3-dev libmp3lame-dev vim htop screen git icecast2 libtool-bin rtl-sdr sox libsox-fmt-mp3 ezstream iftop bc
+    sudo apt install build-essential devscripts autotools-dev fakeroot dpkg-dev debhelper autotools-dev dh-make quilt ccache libsamplerate0-dev libpulse-dev libaudio-dev lame libjack-jackd2-dev libasound2-dev libtwolame-dev libfaad-dev libflac-dev libmp4v2-dev libshout3-dev libmp3lame-dev vim htop screen git icecast2 libtool-bin rtl-sdr sox libsox-fmt-mp3 ezstream iftop bc
 
 Installing these packages will take several minutes, now would be a good time to get a coffee or take a walk or something.  When it asks about configuring Icecast2, just choose the default values for now.  If you plan to expose your Icecast2 server by opening a port, you'll want to change the passwords which you can do by editing /etc/icecast2/icecast.xml and you'll find an authorization section that contains the passwords.  You'll then want to match the source password with the one you use in darkice.cfg. There is more on editing files later. 
 
@@ -115,29 +115,13 @@ Compile and install Darkice (one command at a time):
 
 ### Setup Darkice
 
-I like using vim for text editing, that's just me I'm old school, :grin: you can also use nano if you'd like. More on nano here: https://www.howtogeek.com/howto/42980/the-beginners-guide-to-nano-the-linux-command-line-text-editor and you want to read about vim vs nano vs emacs, here you go: http://downtoearthlinux.com/posts/clash-of-the-text-editors-nano-vim-and-emacs/
-
-Here's a quick vim rundown:
-
-vim test.txt  
-i (i for insert or a for add)  
-Type: "Here's my text"  
-Esc (takes you out of insert/add mode)  
-:wq (w for write q for quit)
-
-If you don't know what's going on hit Esc a few times and start over.  If you make changes and screw up and don't want to save type
-
-    :q!
-
-This will quit without saving changes. Typing : will allow you to search and do other things as well.  Here's more info: https://www.linux.com/learn/vim-101-beginners-guide-vim
-
 Copy darkice.cfg from weather_radio_scripts to /etc
 
     sudo cp ~/weather_radio_scripts/darkice.cfg /etc
     
 The default is to point to your local Icecast server, you can leave this for now and come back to it to change it.  To do so, edit it this way:
 
-    sudo vim /etc/darkice.cfg
+    sudo nano /etc/darkice.cfg
     
 Darkice allows you to stream to up to 8 Icecast/Shoutcast servers from a single source and each can have its own bitrate, sampleRate, etc and it will reencode from the source, they are labeled icecast2-0, icecast2-1, icecast2-2, etc. You shouldn't need more than 2, but you never know.  For more info type:
 
@@ -169,7 +153,7 @@ Next copy the rules file for RTL SDR which allows the correct kernel driver to b
     
 The included script which starts the RTL SDR (weather-radio.sh) has three options for streaming.  The first two are commented out, but the last one will pipe to the loopback virtual sound card.  Edit the last line of the script and modify the frequency to match you local weather radio frequency:
 
-    vim ~/weather_radio_scripts/weather-radio.sh
+    nano ~/weather_radio_scripts/weather-radio.sh
     
 The first section of that line looks like this:
 
