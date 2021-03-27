@@ -27,7 +27,7 @@ Nooelec has good RTL SDR kits, this one is fairly small and includes an antenna:
 
 The Raspberry Pi works very well with Power Over Ethernet (PoE), in the case where you want to put it somewhere where there is no power outlet available or in a closet or somewhere else out of sight.  You'll need a PoE injector: https://www.amazon.com/TP-LINK-TL-PoE150S-Injector-Adapter-compliant/dp/B001PS9E5I/ and a splitter: https://www.amazon.com/gp/product/B019BLMWWW.  There are also PoE switches available such as this one: https://www.amazon.com/dp/B01MRO4M73 If you get a PoE switch, you will not need the injector, but will still need the splitter. Using PoE will combine the power and ethernet into one cable and you will not need a power supply for the Raspberry Pi.
 
-Starting with the Raspberry Pi 3 B+ model, there is built in support for PoE one of the following PoE hats: https://www.amazon.com/s?k=raspberry+pi+poe+hat&ref=nb_sb_noss_1, if you do this, make sure it will fit in the case.
+Starting with the Raspberry Pi 3 B+ model, there is built in support for PoE one of the following PoE hats: https://www.amazon.com/s?k=raspberry+pi+poe+hat&ref=nb_sb_noss_1, if you do this, make sure it will fit in the case.  If you purchase the PoE switch and one of the above hats, you won't need an injector or splitter.
 
 ### The Antenna
 
