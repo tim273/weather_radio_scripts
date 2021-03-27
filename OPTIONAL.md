@@ -64,8 +64,8 @@ Alternatively, you could copy the script to /etc/cron.hourly where it will get r
 
 Occasionally there are software updates which the repository will handle for you.  To update log in and type:
 
-    sudo apt-get update
-    sudo apt-get dist-upgrade
+    sudo apt update
+    sudo apt dist-upgrade
 
 It's usually good to do this about once a week, sometimes the Pi will need to be rebooted, but usually only if there is a kernel update.
 
@@ -108,7 +108,7 @@ This is darkice dealing with network issues, but if you see multiple messages th
 
 If you're worried about your bandwidth or your ISP has limitations Linode (http://www.linode.com/) has a number of inexpensive options that can be used to set up an Icecast server, starting at $5 a month for 1TB of data transfer (both in and out).  When setting up the Linode, choose the latest Ubuntu LTS release.  Setup will be similar to the Raspberry Pi, except there is no raspi-config utility, but it uses the same apt-get utility and has all the same tools.  Icecast can be installed by running this:
 
-    sudo apt-get install icecast2
+    sudo apt install icecast2
 
 You'll also need to register a domain and tie it to the IP address. That's not absolutely necessary, but otherwise you would just use your IP address to access the Icecast server, not pretty, but it works.  Then you would just send your stream to your Linode Icecast server.
 
