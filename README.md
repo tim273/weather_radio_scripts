@@ -12,7 +12,7 @@ You can also use a Raspberry Pi with just Darkice and a weather radio, the setup
 
 ### Equipment
 
-Purchase a Raspberry Pi from Amazon: https://www.amazon.com/CanaKit-Raspberry-4GB-Starter-Kit/dp/B07V5JTMV9 (choose any of 2, 4 or 8 GB models, but 2 GB will be plenty for this purpose).  The above kit comes with everything you need except a network cable.  If you decide to purchase the parts separately, you'll also need a microSD card, preferably class 10: https://www.amazon.com/SanDisk-Ultra-Micro-Adapter-SDSQUNC-016G-GN6MA/dp/B010Q57SEE/
+Purchase a Raspberry Pi from Amazon: https://www.amazon.com/CanaKit-Raspberry-4GB-Starter-Kit/dp/B07V5JTMV9 (choose any of 2, 4 or 8 GB models, but 2 GB will be plenty for this purpose).  The above kit comes with everything you need except a network cable.  
 
 Micro Center also carries Raspberry Pi's and everything else you'll need:
 
@@ -27,7 +27,7 @@ Nooelec has good RTL SDR kits, this one is fairly small and includes an antenna:
 
 The Raspberry Pi works very well with Power Over Ethernet (PoE), in the case where you want to put it somewhere where there is no power outlet available or in a closet or somewhere else out of sight.  You'll need a PoE injector: https://www.amazon.com/TP-LINK-TL-PoE150S-Injector-Adapter-compliant/dp/B001PS9E5I/ and a splitter: https://www.amazon.com/gp/product/B019BLMWWW.  There are also PoE switches available such as this one: https://www.amazon.com/dp/B01MRO4M73 If you get a PoE switch, you will not need the injector, but will still need the splitter. Using PoE will combine the power and ethernet into one cable and you will not need a power supply for the Raspberry Pi.
 
-Starting with the Raspberry Pi 3 B+ model, there is built in support for PoE with the official PoE hat (https://www.raspberrypi.org/products/poe-hat/ coming soon as of this writing), this would eliminate the need for a splitter and if you have a PoE switch (see link above), you could plug your cable directly from the switch to the Raspberry Pi.
+Starting with the Raspberry Pi 3 B+ model, there is built in support for PoE one of the following PoE hats: https://www.amazon.com/s?k=raspberry+pi+poe+hat&ref=nb_sb_noss_1, if you do this, make sure it will fit in the case.
 
 ### The Antenna
 
