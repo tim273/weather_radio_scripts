@@ -12,7 +12,7 @@ You can also use a Raspberry Pi with just Darkice and a weather radio, the setup
 
 ### Equipment
 
-Purchase a Raspberry Pi from Amazon: https://www.amazon.com/CanaKit-Raspberry-4GB-Starter-Kit/dp/B07V5JTMV9 (choose any of 2, 4 or 8 GB models, but 2 GB will be plenty for this purpose) you'll also need a microSD card, preferably class 10: https://www.amazon.com/SanDisk-Ultra-Micro-Adapter-SDSQUNC-016G-GN6MA/dp/B010Q57SEE/
+Purchase a Raspberry Pi from Amazon: https://www.amazon.com/CanaKit-Raspberry-4GB-Starter-Kit/dp/B07V5JTMV9 (choose any of 2, 4 or 8 GB models, but 2 GB will be plenty for this purpose).  The above kit comes with everything you need except a network cable.  If you decide to purchase the parts separately, you'll also need a microSD card, preferably class 10: https://www.amazon.com/SanDisk-Ultra-Micro-Adapter-SDSQUNC-016G-GN6MA/dp/B010Q57SEE/
 
 Micro Center also carries Raspberry Pi's and everything else you'll need:
 
