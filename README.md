@@ -42,7 +42,7 @@ Alternatively you could purchase this antenna if you're not comfortable building
 If you build or purchase an external antenna, you'll need these adapters:
 
 Coax Cable: https://www.amazon.com/50ft-Rg8x-Pl259-Antenna-Cable/dp/B00D66RDYQ (you can get a shorter length if need be)  
-Adapters: http://www.nooelec.com/store/male-mcx-to-male-sma-pigtail-rg316-0-5-length.html and https://www.amazon.com/LINGLING-ONE-Coaxial-Adapter-Female/dp/B06XF7W38M
+Adapters: https://www.amazon.com/DHT-Electronics-Handheld-Antenna-Connectors/dp/B00COW5E3A if you are using a physical weather radio, you may need this one: https://www.amazon.com/Ancable-Connector-Antenna-Adapter-Heathkit/dp/B077W3X9NC
 
 ### OS Install
 
